@@ -1,4 +1,3 @@
-<!-- updated version -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,189 +5,327 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Welldrobe MVP</title>
   <style>
-      * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-  }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
 
-  body {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(180deg, #fff7fb, #f6fbff, #f8fff8);
-    color: #222;
-    line-height: 1.6;
-  }
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(180deg, #fff7fb, #f6fbff, #f8fff8);
+      color: #222;
+      line-height: 1.6;
+    }
 
-  nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 16px 40px;
-    background: rgba(255, 255, 255, 0.92);
-    backdrop-filter: blur(10px);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
-  }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 40px;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+    }
 
-  .nav-left {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-  }
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
 
-  .nav-left img {
-    height: 42px;
-    width: auto;
-    border-radius: 8px;
-    display: block;
-  }
+    .nav-left img {
+      height: 42px;
+      width: auto;
+      border-radius: 8px;
+      display: block;
+    }
 
-  .brand-text strong {
-    display: block;
-    font-size: 18px;
-    color: #222;
-  }
+    .brand-text strong {
+      display: block;
+      font-size: 18px;
+      color: #222;
+    }
 
-  .brand-text span {
-    font-size: 12px;
-    color: #666;
-  }
+    .brand-text span {
+      font-size: 12px;
+      color: #666;
+    }
 
-  .nav-links a {
-    text-decoration: none;
-    color: #333;
-    margin-left: 22px;
-    font-weight: bold;
-    transition: 0.3s ease;
-  }
+    .nav-links a {
+      text-decoration: none;
+      color: #333;
+      margin-left: 22px;
+      font-weight: bold;
+      transition: 0.3s ease;
+    }
 
-  .nav-links a:hover {
-    color: #ff6fa5;
-  }
+    .nav-links a:hover {
+      color: #ff6fa5;
+    }
 
-  header {
-    min-height: 88vh;
-    background:
-      linear-gradient(135deg, rgba(255, 182, 193, 0.68), rgba(173, 216, 230, 0.64), rgba(255, 239, 186, 0.68)),
-      url("https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=1400&q=80") center/cover no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 60px 20px;
-    position: relative;
-  }
+    header {
+      min-height: 88vh;
+      background:
+        linear-gradient(135deg, rgba(255, 182, 193, 0.68), rgba(173, 216, 230, 0.64), rgba(255, 239, 186, 0.68)),
+        url("https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=1400&q=80") center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 60px 20px;
+      position: relative;
+    }
 
-  header::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(255, 255, 255, 0.25);
-    backdrop-filter: blur(2px);
-  }
+    header::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(255, 255, 255, 0.25);
+      backdrop-filter: blur(2px);
+    }
 
-  header .content {
-    position: relative;
-    z-index: 1;
-    max-width: 700px;
-  }
+    header .content {
+      position: relative;
+      z-index: 1;
+      max-width: 700px;
+    }
 
-  header h1 {
-    font-size: 48px;
-    margin-bottom: 18px;
-    color: #111;
-  }
+    header h1 {
+      font-size: 48px;
+      margin-bottom: 18px;
+      color: #111;
+    }
 
-  header p {
-    font-size: 18px;
-    margin-bottom: 24px;
-  }
+    header p {
+      font-size: 18px;
+      margin-bottom: 24px;
+    }
 
-  .btn {
-    background: #ff6fa5;
-    color: white;
-    padding: 12px 24px;
-    border: none;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s ease;
-  }
+    .btn {
+      background: #ff6fa5;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s ease;
+      display: inline-block;
+    }
 
-  .btn:hover {
-    background: #ff4d8d;
-  }
+    .btn:hover {
+      background: #ff4d8d;
+    }
 
-  section {
-    padding: 60px 40px;
-    text-align: center;
-  }
+    section {
+      padding: 60px 40px;
+      text-align: center;
+    }
 
-  .cards {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 30px;
-    flex-wrap: wrap;
-  }
+    .cards {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 30px;
+      flex-wrap: wrap;
+    }
 
-  .card {
-    width: 280px;
-    background: white;
-    border-radius: 12px;
-    padding: 16px;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-  }
+    .card {
+      width: 280px;
+      background: white;
+      border-radius: 12px;
+      padding: 16px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    }
 
-  /* ✅ FIXED IMAGE SIZE */
-  .card img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 10px;
-  }
+    .card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
 
-  /* 🔥 MVP BLACK BOX */
-  .mvp {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 40px;
-    flex-wrap: wrap;
+    .card h3 {
+      margin-top: 14px;
+      margin-bottom: 10px;
+    }
 
-    background: #0d0c23;
-    color: white;
-    padding: 40px;
-    border-radius: 16px;
+    .how-it-works {
+      background: linear-gradient(90deg, rgba(255, 230, 240, 0.55), rgba(230, 240, 255, 0.55));
+      border-radius: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
 
-    max-width: 900px;
-    margin: 40px auto;
-  }
+    .how-it-works p.section-text {
+      max-width: 850px;
+      margin: 18px auto 0;
+      color: #666;
+      font-size: 18px;
+    }
 
-  .mvp-text {
-    max-width: 400px;
-    text-align: left;
-  }
+    .steps {
+      display: flex;
+      justify-content: center;
+      gap: 28px;
+      margin-top: 45px;
+      flex-wrap: wrap;
+    }
 
-  .mvp-text h2,
-  .mvp-text p {
-    color: white;
-  }
+    .step-card {
+      width: 300px;
+      background: rgba(255, 255, 255, 0.92);
+      border-radius: 20px;
+      padding: 34px 24px;
+      box-shadow: 0 10px 24px rgba(0,0,0,0.06);
+    }
 
-  .mvp-image img {
-    width: 320px;
-    border-radius: 12px;
-  }
+    .step-number {
+      width: 64px;
+      height: 64px;
+      margin: 0 auto 22px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #9fc5ff, #d8b4fe);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 34px;
+      font-weight: bold;
+      color: #222;
+    }
 
-  footer {
-    padding: 30px;
-    text-align: center;
-    font-size: 14px;
-    color: #555;
-  }
+    .step-card h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .step-card p {
+      color: #333;
+      font-size: 16px;
+    }
+
+    .mvp {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+      background: #0d0c23;
+      color: white;
+      padding: 40px;
+      border-radius: 16px;
+      max-width: 900px;
+      margin: 40px auto;
+    }
+
+    .mvp-text {
+      max-width: 400px;
+      text-align: left;
+    }
+
+    .mvp-text h3 {
+      margin-bottom: 14px;
+      font-size: 28px;
+      color: white;
+    }
+
+    .mvp-text p {
+      color: white;
+    }
+
+    .mvp-image img {
+      width: 320px;
+      border-radius: 12px;
+      display: block;
+    }
+
+    .waitlist-section {
+      max-width: 1000px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.88);
+      border-radius: 28px;
+      padding: 60px 30px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+    }
+
+    .waitlist-section h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    .waitlist-section p {
+      max-width: 720px;
+      margin: 0 auto 28px;
+      color: #666;
+      font-size: 17px;
+    }
+
+    .waitlist-btn {
+      display: inline-block;
+      padding: 14px 34px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: bold;
+      color: #111;
+      background: linear-gradient(90deg, #67d5b5, #84b6f4);
+      transition: 0.3s ease;
+    }
+
+    .waitlist-btn:hover {
+      transform: translateY(-2px);
+      opacity: 0.95;
+    }
+
+    footer {
+      padding: 30px;
+      text-align: center;
+      font-size: 14px;
+      color: white;
+      background: #0b0b0f;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        gap: 14px;
+        padding: 16px 20px;
+      }
+
+      .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .nav-links a {
+        margin: 8px 10px;
+      }
+
+      header h1 {
+        font-size: 36px;
+      }
+
+      section {
+        padding: 50px 20px;
+      }
+
+      .mvp-image img {
+        width: 100%;
+        max-width: 320px;
+      }
+
+      .step-card,
+      .card {
+        width: 100%;
+        max-width: 320px;
+      }
+    }
   </style>
 </head>
 
@@ -196,9 +333,7 @@
 
   <nav>
     <div class="nav-left">
-      <!-- ONLY CHANGE IS HERE -->
       <img src="./Logo.jpeg" alt="Welldrobe Logo" />
-
       <div class="brand-text">
         <strong>Welldrobe</strong>
         <span>Dress Smart. Live Well.</span>
@@ -206,23 +341,26 @@
     </div>
 
     <div class="nav-links">
-      <a href="#">Home</a>
       <a href="#features">Features</a>
+      <a href="#how-it-works">How It Works</a>
       <a href="#mvp">MVP</a>
+      <a href="#waitlist">Waitlist</a>
     </div>
   </nav>
 
   <header>
     <div class="content">
       <h1>Your Smart Wardrobe</h1>
-      <p>Dress Smart. Live Well. An AI-powered wardrobe assistant that helps
-        users choose outfits based on their closet, schedule, and weather.</p>
-      <a href="#" class="btn">Get Started</a>
+      <p>
+        Dress Smart. Live Well. An AI-powered wardrobe assistant that helps
+        users choose outfits based on their closet, schedule, and weather.
+      </p>
+      <a href="#waitlist" class="btn">Join the Waitlist</a>
     </div>
   </header>
 
   <section id="features">
-    <h2> Key Features</h2>
+    <h2>Key Features</h2>
     <div class="cards">
       <div class="card">
         <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=80" alt="Digital wardrobe" />
@@ -233,13 +371,42 @@
       <div class="card">
         <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80" alt="Weather planning" />
         <h3>Weather Based</h3>
-        <p>Outfit choices adjust to weather conditions so users are dressed appropriately for the day<p>
+        <p>Outfit choices adjust to weather conditions so users are dressed appropriately for the day.</p>
       </div>
 
       <div class="card">
         <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=80" alt="Closet organization" />
         <h3>Outfit Planning</h3>
-        <p>Users can upload, sort, and organize clothing items in one visual digital wardrobe to help create outfits.<p>
+        <p>Users can upload, sort, and organize clothing items in one visual digital wardrobe to help create outfits.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="how-it-works">
+    <div class="how-it-works">
+      <h2>How It Works</h2>
+      <p class="section-text">
+        The MVP focuses on the simplest version of the product that still shows the main value of the business idea.
+      </p>
+
+      <div class="steps">
+        <div class="step-card">
+          <div class="step-number">1</div>
+          <h3>Upload Clothes</h3>
+          <p>Add clothing items into your digital wardrobe.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">2</div>
+          <h3>Add Your Day</h3>
+          <p>Include your plans, weather, and context for the day.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">3</div>
+          <h3>Get Suggestions</h3>
+          <p>Welldrobe recommends a smart outfit in seconds.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -248,9 +415,13 @@
     <h2>MVP Concept</h2>
     <div class="mvp">
       <div class="mvp-text">
-        <p>MVP Purpose
-
-            This MVP was created to test whether users would be interested in a context-aware wardrobe app that makes choosing outfits faster and less stressful. Instead of building a full mobile app, this website presents the core concept visually and clearly.</p>
+        <h3>MVP Purpose</h3>
+        <p>
+          This MVP was created to test whether users would be interested in a
+          context-aware wardrobe app that makes choosing outfits faster and less
+          stressful. Instead of building a full mobile app, this website presents
+          the core concept visually and clearly.
+        </p>
       </div>
 
       <div class="mvp-image">
@@ -259,18 +430,20 @@
     </div>
   </section>
 
+  <section id="waitlist">
+    <div class="waitlist-section">
+      <h2>Join the Welldrobe Waitlist</h2>
+      <p>
+        Be among the first to explore a smarter way to plan outfits, organize
+        your closet, and reduce daily wardrobe stress.
+      </p>
+      <a href="#" class="waitlist-btn">Join Now</a>
+    </div>
+  </section>
+
   <footer>
-    <p>© 2026 Welldrobe • MVP Build</p>
+    <p>Welldrobe MVP Website | BUSI 2800 New Venture Project</p>
   </footer>
 
 </body>
 </html>
-<!-- small update to force git push gfjfjyfyfyfuyfuyfuyfuyfuyfuyfuyfyufyyf-->
- <!-- small update to force git push -->
-<!-- small update to force git push -->
- <!-- small update to force git push -->
-   <!-- small update to force git push -->
-     <!-- small update to force git push -->
-       <!-- small update to force git push -->
-         <!-- small update to force git push -->
-         
